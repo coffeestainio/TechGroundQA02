@@ -10,4 +10,6 @@ class SecurePage extends Page {
     get flashAlert () { return $('#flash') }
 }
 
-module.exports = new SecurePage();
+var securePage = new SecurePage();
+
+module.exports = securePage;
