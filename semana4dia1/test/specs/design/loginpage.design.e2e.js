@@ -13,10 +13,6 @@ describe('Login Page design', () => {
 
         expect(Header.iconMenu).not.toBeDisplayed()
 
-        // LoginPage.login('tomsmith', 'SuperSecretPassword!');
-        // expect(SecurePage.flashAlert).toBeExisting();
-        // expect(SecurePage.flashAlert).toHaveTextContaining(
-        //     'You logged into a secure area!');
     });
 });
 

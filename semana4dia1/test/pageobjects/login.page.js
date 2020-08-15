@@ -1,8 +1,8 @@
 const Page = require('./page');
-
 /**
  * sub page containing specific selectors and methods for a specific page
  */
+
 class LoginPage extends Page {
 
     constructor(){
@@ -20,7 +20,7 @@ class LoginPage extends Page {
     get btnSubmit () { return $('#login-button') }
     get imgLogo () { return $('.login_logo') }
     get imgBot () { return $('img.bot_column') }
-    
+
     // maybe this should be on the base page
     get lblError () { return $('[data-test=error]') }
 
@@ -29,6 +29,12 @@ class LoginPage extends Page {
      * e.g. to login using username and password
      */
     login (username, password) {
+
+        if (!username)
+            username = 'standard_user'
+        if (!password)
+            password = 'secret_sauce'
+        
         this.inputUsername.setValue(username);
         this.inputPassword.setValue(password);
         this.btnSubmit.click(); 

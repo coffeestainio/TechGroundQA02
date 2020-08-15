@@ -22,6 +22,7 @@ exports.config = {
 
     suites: 
         { 
+            cart: ['./test/specs/**/cart.e2e.js'],
             login: ['./test/specs/**/login.e2e.js'],
             design: ['./test/specs/design/**/*.e2e.js']
         },
@@ -55,7 +56,9 @@ exports.config = {
         maxInstances: 5,
         browserName: 'chrome',
         acceptInsecureCerts: true
-    },{
+    }
+    ,
+    {
         maxInstances: 5,
         browserName: 'firefox',
         acceptInsecureCerts: true
@@ -136,7 +139,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 60000000
     },
     //
     // =====

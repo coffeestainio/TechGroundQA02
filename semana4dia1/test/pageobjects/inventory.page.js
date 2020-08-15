@@ -11,9 +11,12 @@ class InventoryPage extends Page {
     }
 
     get imgProduct() { return $('img.inventory_item_img') }
+    cardProduct(producto) { return $(`//div[text()='${producto}']/../../..`)}
+    btnInventory(element){ 
+        return element.$('.btn_inventory')
+    }
 
-    getPageUrl() { return this.pageUrl }   
-    
+    getPageUrl() { return this.pageUrl }
 
     isUserOnInventoryPage(){
         return (
@@ -23,7 +26,7 @@ class InventoryPage extends Page {
     }
 
     open () {
-        return super.open(pageUrl);
+        return super.open(this.pageUrl);
     }
 }
 

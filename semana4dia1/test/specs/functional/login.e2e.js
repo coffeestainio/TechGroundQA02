@@ -1,6 +1,6 @@
-const chaiExpect = require('chai').expect;
-const LoginPage = require('../../pageobjects/login.page');
-const InventoryPage = require('../../pageobjects/inventory.page');
+const chaiExpect = require('chai').expect
+const LoginPage = require('../../pageobjects/login.page')
+const InventoryPage = require('../../pageobjects/inventory.page')
 const AccountKeyword = require('../../keywords/account.keyword')
 
 // constants for test validations
@@ -48,3 +48,17 @@ describe('Login Page functionality', () => {
     });
 
 });
+
+describe('Login Page functionality - Logout', () => {
+
+    before(()=>{
+        AccountKeyword.login()
+    })
+
+    it ('should let me logout', () => {
+        AccountKeyword.logout()
+        expect(browser).toHaveUrlContaining(LoginPage.getPageUrl())
+        chaiExpect(InventoryPage.isUserOnInventoryPage()).to.be.false
+    })
+
+})
