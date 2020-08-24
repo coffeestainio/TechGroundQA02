@@ -1,0 +1,22 @@
+{
+  "name": "saucedemo-e2e",
+  "version": "1.0.0",
+  "description": "automated tests for saucedemo",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@wdio/allure-reporter": "^6.3.6",
+    "@wdio/cli": "^6.4.0",
+    "@wdio/local-runner": "^6.4.0",
+    "@wdio/mocha-framework": "^6.4.0",
+    "@wdio/selenium-standalone-service": "^6.4.0",
+    "@wdio/spec-reporter": "^6.4.0",
+    "@wdio/sync": "^6.4.0",
+    "chai": "^4.2.0"
+  },
+  "scripts": {
+    "test": "npx wdio"
+  },
+  "author": "",
+  "license": "ISC"
+}
